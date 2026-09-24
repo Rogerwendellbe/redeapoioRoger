@@ -175,17 +175,13 @@ section.block{padding:clamp(3.5rem,8vw,6rem) clamp(1rem,5vw,4rem)}
 .ch-card p{font-size:.9rem;opacity:.8}
 .ch-card .tag{display:inline-block;margin-top:.8rem;font-size:.78rem;background:var(--sand);color:var(--plum);padding:.25rem .8rem;border-radius:999px;font-weight:600}
 
-/* ===== FORM ===== */
+/* ===== CONTACT CHANNELS ===== */
 .form-section{background:linear-gradient(160deg,var(--sand),var(--cream))}
 .form-box{background:var(--white);border-radius:26px;padding:clamp(1.6rem,4vw,2.8rem);max-width:680px;margin:0 auto;box-shadow:0 22px 55px var(--shadow);border:1px solid rgba(74,31,61,.06)}
 .form-box .privacy{background:#f7dce8;border-radius:14px;padding:.9rem 1.1rem;font-size:.86rem;color:var(--plum);margin-bottom:1.5rem;display:flex;gap:.7rem;align-items:flex-start}
 .form-box .privacy svg{flex:none;width:20px;height:20px;stroke:var(--rose);fill:none;stroke-width:2;margin-top:2px}
-.field{margin-bottom:1.2rem}
-.field label{display:block;font-weight:600;font-size:.92rem;margin-bottom:.4rem;color:var(--plum)}
-.field input,.field select,.field textarea{width:100%;padding:.8rem 1rem;border:1.5px solid rgba(74,31,61,.18);border-radius:12px;font-family:'Outfit';font-size:.98rem;background:var(--cream);transition:border .2s}
-.field input:focus,.field select:focus,.field textarea:focus{outline:none;border-color:var(--rose)}
-.field textarea{resize:vertical;min-height:110px}
-.form-msg{margin-top:1rem;padding:1rem;border-radius:12px;background:var(--sage);color:#fff;font-size:.95rem;display:none}
+.contact-actions{display:flex;gap:1rem;flex-wrap:wrap;justify-content:center}
+.contact-note{margin-top:1.25rem;text-align:center;font-size:.92rem;color:var(--plum)}
 
 /* ===== FAQ ===== */
 .faq{max-width:760px;margin:0 auto}
@@ -237,7 +233,7 @@ footer a:hover{opacity:1;color:var(--rose-soft)}
     <li><a href="#sinais">Sinais</a></li>
     <li><a href="#denunciar">Como denunciar</a></li>
     <li><a href="#canais">Canais</a></li>
-    <li><a href="#contato" class="nav-cta">Pedir ajuda</a></li>
+    <li><a href="#contato" class="nav-cta">Canais de ajuda</a></li>
   </ul>
   <button class="burger" id="burger" aria-label="Menu"><span></span><span></span><span></span></button>
 </nav>
@@ -379,46 +375,24 @@ footer a:hover{opacity:1;color:var(--rose-soft)}
   </div>
 </section>
 
-<!-- FORMULÁRIO -->
+<!-- CONTATO POR CANAIS OFICIAIS -->
 <section class="block form-section" id="contato">
   <div class="container">
     <div class="section-head reveal">
-      <div class="eyebrow">Fale conosco</div>
-      <h2>Pedir ajuda ou informações</h2>
-      <p>Preencha apenas o que se sentir confortável. Sua mensagem é confidencial.</p>
+      <div class="eyebrow">Onde buscar atendimento</div>
+      <h2>Fale diretamente com um canal de ajuda</h2>
+      <p>Este site é informativo e não recebe mensagens. Escolha um canal de atendimento para pedir orientação ou fazer uma denúncia.</p>
     </div>
     <div class="form-box reveal">
       <div class="privacy">
         <svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-        <span><strong>Atenção à sua segurança:</strong> se o agressor tem acesso ao seu dispositivo, use uma aba anônima e apague o histórico. Em emergência, ligue 190 — não espere uma resposta por aqui.</span>
+        <span><strong>Atenção à sua segurança:</strong> se alguém monitora seu dispositivo, procure usar um aparelho seguro. Em perigo imediato, ligue 190.</span>
       </div>
-      <form id="helpForm">
-        <div class="field">
-          <label for="nome">Nome ou apelido (opcional)</label>
-          <input type="text" id="nome" placeholder="Como prefere ser chamada(o)">
-        </div>
-        <div class="field">
-          <label for="tipo">Como podemos ajudar?</label>
-          <select id="tipo" required>
-            <option value="">Selecione...</option>
-            <option>Quero orientação sobre meus direitos</option>
-            <option>Preciso saber como denunciar</option>
-            <option>Busco apoio psicológico ou social</option>
-            <option>Estou ajudando outra pessoa</option>
-            <option>Sou de uma instituição parceira</option>
-          </select>
-        </div>
-        <div class="field">
-          <label for="contato">Contato seguro (e-mail ou telefone — opcional)</label>
-          <input type="text" id="contato" placeholder="Onde podemos responder com segurança">
-        </div>
-        <div class="field">
-          <label for="msg">Sua mensagem</label>
-          <textarea id="msg" placeholder="Conte o que precisa. Não inclua informações que possam te colocar em risco." required></textarea>
-        </div>
-        <button type="submit" class="btn btn-primary" style="width:100%;justify-content:center">Enviar com segurança</button>
-        <div class="form-msg" id="formMsg">✓ Mensagem registrada. Lembre-se: em caso de emergência, ligue sempre 190 ou 180. Você não está sozinha.</div>
-      </form>
+      <div class="contact-actions">
+        <a href="tel:190" class="btn btn-primary">Ligar 190 · emergência</a>
+        <a href="tel:180" class="btn btn-ghost">Ligar 180 · orientação</a>
+      </div>
+      <p class="contact-note">Se preferir, consulte os demais <a href="#canais">canais de atendimento</a> nesta página.</p>
     </div>
   </div>
 </section>
@@ -462,7 +436,7 @@ footer a:hover{opacity:1;color:var(--rose-soft)}
         <li><a href="#tipos">O que é violência</a></li>
         <li><a href="#sinais">Sinais de alerta</a></li>
         <li><a href="#denunciar">Como denunciar</a></li>
-        <li><a href="#contato">Pedir ajuda</a></li>
+        <li><a href="#contato">Canais de ajuda</a></li>
       </ul>
     </div>
   </div>
@@ -492,14 +466,6 @@ document.querySelectorAll('.faq-q').forEach(q=>{
     document.querySelectorAll('.faq-q').forEach(x=>{x.classList.remove('active');x.nextElementSibling.style.maxHeight=null;});
     if(!open){q.classList.add('active');a.style.maxHeight=a.scrollHeight+'px';}
   });
-});
-
-// Form
-document.getElementById('helpForm').addEventListener('submit',e=>{
-  e.preventDefault();
-  document.getElementById('formMsg').style.display='block';
-  e.target.querySelectorAll('input,select,textarea').forEach(f=>f.value='');
-  setTimeout(()=>document.getElementById('formMsg').scrollIntoView({behavior:'smooth',block:'center'}),100);
 });
 
 // Reveal on scroll
